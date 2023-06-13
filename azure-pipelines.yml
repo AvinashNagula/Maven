@@ -10,16 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: SonarQubePrepare@5
-  inputs:
-    SonarQube: 'sonarqube'
-    scannerMode: 'Other'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner,
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.projectKey=PartsUnlimited_maven_AYhM6D2gZ-7MNiOxa3V_
-      sonar.projectName=maven
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -31,6 +21,3 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
-- task: SonarQubePublish@5
-  inputs:
-    pollingTimeoutSec: '300'
