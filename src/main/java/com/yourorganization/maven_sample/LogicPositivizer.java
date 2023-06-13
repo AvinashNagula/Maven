@@ -25,7 +25,7 @@ public class LogicPositivizer {
         // In this case the root directory is found by taking the root from the current Maven module,
         // with src/main/resources appended.
         SourceRoot sourceRoot = new SourceRoot(CodeGenerationUtils.mavenModuleRoot(LogicPositivizer.class).resolve("src/main/resources"));
-
+        //demo
         // Our sample is in the root of this directory, so no package name.
         CompilationUnit cu = sourceRoot.parse("", "Blabla.java");
 
