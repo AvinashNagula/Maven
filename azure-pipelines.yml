@@ -15,9 +15,6 @@ steps:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'Cobertura'
-    codeCoverageClassFilter: 'src/main/java/com/yourorganization/maven_sample'
-    codeCoverageRestoreOriginalPomXml: true
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
