@@ -11,7 +11,7 @@ pool:
 steps:
 - task: DownloadSecureFile@1
   inputs:
-    secureFile: 'Q. 1.txt'
+    secureFile: 'Q1.txt'
     
 - task: Bash@3
   inputs:
