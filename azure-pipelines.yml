@@ -5,9 +5,14 @@
 
 trigger:
 - main
+pool:
+  vmImage: ubuntu-latest
+
+steps:
 - task: DownloadSecureFile@1
   inputs:
     secureFile: 'Q1.txt'
+    
 - task: Bash@3
   inputs:
     targetType: 'inline'
@@ -15,19 +20,3 @@ trigger:
       # Write your commands here
       
       cat Q1.txt
-
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
