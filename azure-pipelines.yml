@@ -17,6 +17,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
+      chmod 777 Q1.txt
       
       cat Q1.txt
