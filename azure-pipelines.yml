@@ -19,4 +19,4 @@ steps:
     script: |
       # Write your commands here
       
-      cat Q. 1.txt
+      cat Q1.txt
