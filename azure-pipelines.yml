@@ -5,6 +5,17 @@
 
 trigger:
 - main
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: 'Q1.txt'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      cat Q1.txt
+
 
 pool:
   vmImage: ubuntu-latest
