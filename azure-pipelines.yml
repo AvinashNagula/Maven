@@ -12,6 +12,8 @@ steps:
 - task: DownloadSecureFile@1
   inputs:
     secureFile: 'Q1.txt'
+    script: pwd
+
     
 - task: Bash@3
   inputs:
