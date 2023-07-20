@@ -3,7 +3,7 @@ pipeline {
    stages {
         stage('testing') {
             steps {
-               sh 'testing from feature jenkins file'
+               sh 'echo "testing from feature jenkins file"'
             }
         }
     }
