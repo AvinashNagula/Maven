@@ -1,10 +1,9 @@
 pipeline {
  agent any
    stages {
-        stage('build') {
+        stage('testing') {
             steps {
-               sh 'sudo apt install maven -y'
-               sh 'mvn clean pack'
+               sh 'echo "testing from feature jenkins file"'
             }
         }
     }
