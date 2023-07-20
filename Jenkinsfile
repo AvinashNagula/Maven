@@ -3,7 +3,7 @@ pipeline {
    stages {
         stage('build') {
             steps {
-               sh 'apt install maven -y'
+               sh 'sudo apt install maven -y'
                sh 'mvn clean pack'
             }
         }
