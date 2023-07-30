@@ -6,9 +6,9 @@ pipeline {
                sh 'echo "Build from feature jenkins file"'
             }
         }
-        stage('prod') {
+        stage('testing') {
                 steps {
-                   sh 'echo "Prod from feature jenkins file"'
+                   sh 'echo "testing from feature jenkins file"'
                 }
             }
         stage('prod') {
