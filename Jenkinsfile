@@ -1,22 +1,18 @@
 pipeline {
- agent any
-   stages {
-        stage('build') {
+    agent any
+    stages {
+        stage('Example Build') {
             steps {
-               sh 'echo "Build from feature jenkins file"'
+                echo 'Hello World'
             }
         }
-        stage('testing') {
-                steps {
-                   sh 'echo "testing from feature jenkins file"'
-                }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
             }
-        stage('prod') {
-                steps {
-                   sh 'echo "Prod from feature jenkins file"'
-                }
+            steps {
+                echo 'Deploying'
             }
-    
+        }
     }
- 
 }
