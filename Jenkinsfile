@@ -6,6 +6,16 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Test') {
+      steps {
+        echo 'Testing...'
+        snykSecurity(
+          snykInstallation: 'synk',
+          snykTokenId: 'SnykToken',
+          // place other parameters here
+        )
+      }
+    }
         stage('Example Deploy') {
             when {
                 branch 'production'
